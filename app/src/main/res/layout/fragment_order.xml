@@ -2,12 +2,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.inward.walking.ui.fragments.HomePageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    tools:context="com.inward.walking.ui.fragments.HomePageFragment">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/big_one"
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128px"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="订单"
+            android:textColor="#fff" />
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="39px"
+            android:layout_height="34px"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="44px"
+            android:background="@mipmap/xiaoxi3x" />
+
+        <TextView
+            android:id="@+id/xiaoxitv_num"
+            android:layout_width="23px"
+            android:layout_height="23px"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginTop="40px"
+            android:layout_marginRight="36px"
+            android:background="@drawable/xiaoxinum_shape"
+            android:gravity="center"
+            android:text="12"
+            android:textColor="#000"
+            android:textSize="10px" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/relative_shape_four"
+        android:layout_marginTop="352px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="订单" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/my_qiangdan"
+            android:layout_width="691px"
+            android:layout_height="130px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37px"
+            android:background="@drawable/relative_shape_one">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的抢单服务"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_yuyue"
+            android:layout_width="691px"
+            android:layout_height="130px"
+            android:layout_below="@id/my_qiangdan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37px"
+            android:background="@drawable/relative_shape_two">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="预约订单服务"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_luxian"
+            android:layout_width="691px"
+            android:layout_height="130px"
+            android:layout_below="@id/my_yuyue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37px"
+            android:background="@drawable/relative_shape_three">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的路线服务"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
 
 </com.zhy.autolayout.AutoLinearLayout>
