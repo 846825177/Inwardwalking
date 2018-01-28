@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import com.inward.walking.R;
+import com.inward.walking.tools.Tools;
 import com.zhy.autolayout.AutoLayoutActivity;
 
 public class BaseActivity extends AutoLayoutActivity {
@@ -17,7 +18,7 @@ public class BaseActivity extends AutoLayoutActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             int flagTranslucentStatus = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
             int flagTranslucentNavigation = WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION;
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -33,6 +34,8 @@ public class BaseActivity extends AutoLayoutActivity {
                 window.setAttributes(attributes);
             }
         }
+        */
+        Tools.setAlpha(getWindow(),this);
     }
 
     /**

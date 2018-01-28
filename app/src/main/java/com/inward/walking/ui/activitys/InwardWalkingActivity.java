@@ -36,7 +36,6 @@ public class InwardWalkingActivity extends BaseActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inward_walking);
-        Tools.setAlpha(getWindow(), this);
         initView();
         initData();
     }

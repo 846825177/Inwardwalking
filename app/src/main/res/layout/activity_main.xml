@@ -6,8 +6,8 @@
     android:background="@mipmap/back"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:orientation="vertical"
     tools:context="com.inward.walking.ui.activitys.LoginActivity">
+
     <ImageView
         android:src="@mipmap/user2x"
         android:layout_marginTop="660px"
