@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.inward.walking.R;
+import com.inward.walking.adapter.RouteAdapter;
 import com.zhy.autolayout.AutoRelativeLayout;
 
 /**
@@ -29,5 +30,7 @@ public class RouteFragment extends Fragment {
 
     private void initView(View view) {
         mHomeListView = (ListView) view.findViewById(R.id.mHomeListView);
+        RouteAdapter routeAdapter = new RouteAdapter(getActivity());
+        mHomeListView.setAdapter(routeAdapter);
     }
 }
