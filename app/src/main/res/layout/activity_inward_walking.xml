@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f00"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical"
+    tools:context=".ui.activitys.InwardWalkingActivity">
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/daohanglan"
+        android:layout_width="match_parent"
+        android:layout_height="100px" />
+    <RadioGroup
+        android:clipChildren="false"
+        android:gravity="bottom"
+        android:id="@+id/mRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/mRadio_home"
+            android:layout_width="0dp"
+            android:drawableTop="@drawable/select_homepage"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/mRadio_route"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:gravity="center_horizontal"
+            android:drawableTop="@drawable/select_route"
+            android:text="线路" />
+
+
+        <RadioButton
+            android:drawableTop="@drawable/select_grab_a_page"
+            android:id="@+id/mRadio_GrabaSingle"
+            android:layout_width="0dp"
+            android:layout_height="250px"
+            android:gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="抢单" />
+        <RadioButton
+            android:drawableTop="@drawable/select_order"
+            android:id="@+id/mRadio_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="订单" />
+
+        <RadioButton
+            android:drawableTop="@drawable/select_persional"
+            android:id="@+id/mRadio_persional"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="我的" />
+    </RadioGroup>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_above="@id/mRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+</RelativeLayout>
