@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,12 @@
     android:clipChildren="false"
     android:orientation="vertical"
     tools:context=".ui.activitys.InwardWalkingActivity">
+    <ImageView
+        android:layout_marginBottom="10px"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/daohanglan"
+        android:layout_width="match_parent"
+        android:layout_height="100px" />
     <ImageView
         android:layout_alignParentBottom="true"
         android:background="@mipmap/daohanglan"
@@ -46,7 +52,7 @@
             android:drawableTop="@drawable/select_grab_a_page"
             android:id="@+id/mRadio_GrabaSingle"
             android:layout_width="0dp"
-            android:layout_height="250px"
+            android:layout_height="230px"
             android:gravity="center_horizontal|bottom"
             android:layout_weight="1"
             android:button="@null"
@@ -76,4 +82,4 @@
         android:layout_above="@id/mRadioGroup"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></android.support.v4.view.ViewPager>
-</RelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>
