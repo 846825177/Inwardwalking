@@ -8,6 +8,10 @@
     android:clipChildren="false"
     android:orientation="vertical"
     tools:context=".ui.activitys.InwardWalkingActivity">
+    <include
+        android:id="@+id/mRouteTitle"
+        layout="@layout/toolbar"
+        />
     <ImageView
         android:layout_marginBottom="10px"
         android:layout_alignParentBottom="true"
@@ -78,6 +82,7 @@
             android:text="我的" />
     </RadioGroup>
     <android.support.v4.view.ViewPager
+        android:layout_below="@id/mRouteTitle"
         android:id="@+id/mViewPager"
         android:layout_above="@id/mRadioGroup"
         android:layout_width="match_parent"

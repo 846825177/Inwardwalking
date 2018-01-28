@@ -3,14 +3,13 @@ package com.inward.walking.ui.activitys;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.inward.walking.R;
 import com.inward.walking.adapter.FPAdapter;
-import com.inward.walking.tools.Tools;
 import com.inward.walking.ui.BaseActivity;
 import com.inward.walking.ui.fragments.GrabaSingleFragment;
 import com.inward.walking.ui.fragments.HomePageFragment;
@@ -31,6 +30,7 @@ public class InwardWalkingActivity extends BaseActivity implements View.OnClickL
     private RadioButton mRadio_order;
     private RadioButton mRadio_persional;
     private RadioGroup mRadioGroup;
+    private TextView mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,7 @@ public class InwardWalkingActivity extends BaseActivity implements View.OnClickL
         mData.add(new OrderFragment());
         mData.add(new PersonalFragment());
         adapter.notifyDataSetChanged();
+        mTitle.setText("首页");
 
     }
 
@@ -72,24 +73,33 @@ public class InwardWalkingActivity extends BaseActivity implements View.OnClickL
 
             @Override
             public void onPageSelected(int position) {
-            switch (position){
-                case 0:
-                    mRadio_home.setChecked(true);
-                    break;
-                case 1:
-                    mRadio_route.setChecked(true);
-                    break;
-                case 2:
-                    mRadio_GrabaSingle.setChecked(true);
-                    break;
-                case 3:
-                    mRadio_order.setChecked(true);
-                    break;
-                case 4:
-                    mRadio_persional.setChecked(true);
+                switch (position) {
+                    case 0:
+                        mRadio_home.setChecked(true);
+                        mTitle.setText("首页");
+                        break;
+                    case 1:
+                        mRadio_route.setChecked(true);
+                        mTitle.setText("路线");
+
+                        break;
+                    case 2:
+                        mRadio_GrabaSingle.setChecked(true);
+                        mTitle.setText("抢单");
+
+                        break;
+                    case 3:
+                        mRadio_order.setChecked(true);
+                        mTitle.setText("订单");
+
+                        break;
+                    case 4:
+                        mRadio_persional.setChecked(true);
+                        mTitle.setText("我的");
+
                         break;
 
-            }
+                }
             }
 
             @Override
@@ -97,29 +107,37 @@ public class InwardWalkingActivity extends BaseActivity implements View.OnClickL
 
             }
         });
+        mTitle = (TextView) findViewById(R.id.mTitle);
+        mTitle.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-                switch (view.getId()){
-                    case R.id.mRadio_home:
-                        mViewPager.setCurrentItem(0);
-                        break;
-                    case R.id.mRadio_route:
-                        mViewPager.setCurrentItem(1);
+        switch (view.getId()) {
+            case R.id.mRadio_home:
+                mViewPager.setCurrentItem(0);
+                mTitle.setText("首页");
 
-                        break;
-                    case R.id.mRadio_GrabaSingle:
-                        mViewPager.setCurrentItem(2);
+                break;
+            case R.id.mRadio_route:
+                mViewPager.setCurrentItem(1);
+                mTitle.setText("路线");
 
-                        break;
-                    case R.id.mRadio_order:
-                        mViewPager.setCurrentItem(3);
+                break;
+            case R.id.mRadio_GrabaSingle:
+                mViewPager.setCurrentItem(2);
+                mTitle.setText("抢单");
 
-                        break;
-                    case R.id.mRadio_persional:
-                        mViewPager.setCurrentItem(4);
-                        break;
-                }
+                break;
+            case R.id.mRadio_order:
+                mViewPager.setCurrentItem(3);
+                mTitle.setText("订单");
+
+                break;
+            case R.id.mRadio_persional:
+                mViewPager.setCurrentItem(4);
+                mTitle.setText("我的");
+                break;
+        }
     }
 }
