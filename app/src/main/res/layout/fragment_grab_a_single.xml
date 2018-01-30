@@ -2,12 +2,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.inward.walking.ui.fragments.HomePageFragment">
+    android:orientation="vertical"
+    tools:context="com.inward.walking.ui.fragments.GrabaSingleFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="抢单" />
+        android:layout_height="100px"
+        android:background="#232730"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:checked="true"
+            android:layout_gravity="center"
+            style="@style/TabText"
+            android:button="@null"
+            android:id="@+id/mBtnTourist"
+            android:layout_width="0dp"
+            android:layout_height="100px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="旅行社订单"
+            android:textColor="@color/graba_textview_selector"
+ />
+
+        <RadioButton
+            android:layout_gravity="center"
+            style="@style/TabText"
+            android:button="@null"
+            android:id="@+id/mBtnTravel"
+            android:layout_width="0dp"
+            android:layout_height="100px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="游客订单"
+            android:textColor="@color/graba_textview_selector" />
+
+        <RadioButton
+            android:layout_gravity="center"
+            style="@style/TabText"
+            android:button="@null"
+            android:id="@+id/mBtnRobbed"
+            android:layout_width="0dp"
+            android:layout_height="100px"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="已抢订单"
+            android:textColor="@color/graba_textview_selector" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/mFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
 
 </com.zhy.autolayout.AutoLinearLayout>

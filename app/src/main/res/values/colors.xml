@@ -6,4 +6,7 @@
     <color name="login_user">#77C2C2BF</color>
     <color name="login_btn">#770cc091</color>
     <color name="regisert_btn">#00c899</color>
+    <color name="grab_text">#ffffff</color>
+    <color name="grab_text_click">#08c99a</color>
+
 </resources>
